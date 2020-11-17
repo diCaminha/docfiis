@@ -1,4 +1,5 @@
 const { Model, DataTypes } = require("sequelize");
+const Fii = require("./Fii");
 
 class documento extends Model {
   static init(connection) {
@@ -14,7 +15,7 @@ class documento extends Model {
   }
 
   static associate(models) {
-    this.belongsTo(models.Fii, { foreignKey: "fii_id", as: "fii" });
+    this.belongsTo(Fii, { foreignKey: "fii_id", as: "fii" });
   }
 }
 
