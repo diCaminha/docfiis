@@ -1,0 +1,25 @@
+{
+  "name": "docfiis",
+  "version": "1.0.0",
+  "description": "api for the project docfiis",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "start:dev": "nodemon src/server.js",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diCaminha/docfiis.git"
+  },
+  "author": "Denis Caminha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diCaminha/docfiis/issues"
+  },
+  "homepage": "https://github.com/diCaminha/docfiis#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
+  }
+}
