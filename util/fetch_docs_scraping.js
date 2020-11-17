@@ -4,8 +4,11 @@ require("../src/database");
 
 getDocs = async () => {
   const fiis = await Fii.findAll();
-  fiis.forEach((fii) => {
-    if (fii.code === "XPLG11") scrapingFii.getDocumentsByFii(fii.code);
+  fiis.forEach(async (fii) => {
+    if (fii.code === "XPLG11") {
+      const docs = await scrapingFii.getDocumentsByFii(fii.code);
+      console.log(docs);
+    }
   });
   console.log(fiis.length);
 };

@@ -14,8 +14,8 @@ exports.getDocumentsByFii = async (fii) => {
     for (let i = 0; i < links.length; i++) {
       let linkDoc = links[i].getAttribute("href");
       let titulo = links[i].innerHTML;
-      console.log(linkDoc, titulo);
-      let doc = { link: linkDoc, titulo: titulo };
+      let docId = links[i].getAttribute("href").split("id=")[1];
+      let doc = { link: linkDoc, titulo: titulo, docId: docId };
       documentos.push(doc);
     }
 
