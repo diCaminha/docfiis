@@ -7,6 +7,7 @@ class documento extends Model {
       {
         link: DataTypes.STRING,
         titulo: DataTypes.STRING,
+        docId: DataTypes.INTEGER,
       },
       {
         sequelize: connection,
