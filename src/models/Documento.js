@@ -12,6 +12,10 @@ class documento extends Model {
       }
     );
   }
+
+  static associate(models) {
+    this.belongsTo(models.Fii, { foreignKey: "fii_id", as: "fii" });
+  }
 }
 
 module.exports = documento;

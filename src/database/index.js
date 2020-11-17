@@ -12,4 +12,7 @@ User.init(connection);
 Fii.init(connection);
 Documento.init(connection);
 
+//associacoes
+Documento.associate(connection.models);
+
 module.exports = connection;
